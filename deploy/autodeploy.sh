@@ -44,20 +44,25 @@ fi
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 mkdir -p "$DEPLOY_DIR"
-rsync -a --delete --exclude '.git' --exclude 'deploy' --exclude '__pycache__' --exclude '*.pyc' "$PROJECT_ROOT/" "$DEPLOY_DIR/"
+rsync -a --delete --exclude '.git' --exclude 'deploy' --exclude '__pycache__' --exclude '*.pyc' --exclude 'backend/.venv' "$PROJECT_ROOT/" "$DEPLOY_DIR/"
 
 cd "$BACKEND_DIR"
+
+if [[ -d "$VENV_DIR" && ! -f "$VENV_DIR/bin/activate" ]]; then
+  rm -rf "$VENV_DIR"
+fi
 
 if [[ ! -d "$VENV_DIR" ]]; then
   "$PYTHON_BIN" -m venv "$VENV_DIR"
 fi
 source "$VENV_DIR/bin/activate"
-python -m pip install --upgrade pip setuptools wheel
-python -m pip install django django-cors-headers djangorestframework djangorestframework-simplejwt uvicorn[standard]
+python -m pip install --upgrade pip setuptools wheel uv
 
 if [[ ! -f "$BACKEND_DIR/db.sqlite3" ]]; then
   echo "Advertencia: No se encontró db.sqlite3 en el backend. Asegúrate de copiar la base de datos si es necesaria."
 fi
+
+uv sync --yes
 
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
@@ -111,22 +116,22 @@ server {
 
     location /api/ {
         proxy_pass http://127.0.0.1:$DJANGO_PORT;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto \$scheme;
     }
 
     location /admin/ {
         proxy_pass http://127.0.0.1:$DJANGO_PORT;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto \$scheme;
     }
 
     location / {
-        try_files $uri $uri/ /index.html;
+        try_files \$uri \$uri/ /index.html;
     }
 
     location ~* \.(?:css|js|jpg|jpeg|png|gif|ico|svg|woff2?|ttf|eot)$ {
