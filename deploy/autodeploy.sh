@@ -62,7 +62,7 @@ if [[ ! -f "$BACKEND_DIR/db.sqlite3" ]]; then
   echo "Advertencia: No se encontró db.sqlite3 en el backend. Asegúrate de copiar la base de datos si es necesaria."
 fi
 
-uv sync --yes
+yes | uv sync
 
 python manage.py migrate --noinput
 python manage.py collectstatic --noinput
