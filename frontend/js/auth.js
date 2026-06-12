@@ -1,6 +1,6 @@
 'use strict';
 
-var API_BASE = 'http://localhost:8000/api';
+var API_BASE = 'http://localhost:8800/api';
 
 var Auth = (function () {
 
