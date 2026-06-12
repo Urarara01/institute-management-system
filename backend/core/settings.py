@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ro33_2-bnj1i@q&p#^miv)7r$#imo6e_^u(^f)#6hs#l*km0y@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DJANGO_DEBUG", "False").lower() in ("1", "true", "yes")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "portal.urarara.online").split(",")
 
 
 # Application definition
@@ -126,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -158,5 +160,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',  # Vite/React dev
     'http://localhost:3000',  # Next.js dev
     'http://127.0.0.1:5500',  # Live Server (VS Code)
+    'http://192.168.18.26:3002',  # Otro equipo en la red local
+    'http://192.168.18.26:3000',  # Otro equipo en la red local
 ]
 CORS_ALLOW_CREDENTIALS = True

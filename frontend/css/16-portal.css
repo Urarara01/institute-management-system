@@ -1,0 +1,351 @@
+/* ================================================================
+   16-portal.css — Estilos del Portal del Estudiante
+   ================================================================ */
+
+/* ── Header portal ─────────────────────────────────────────────── */
+.portal-header__user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.portal-header__name {
+  font-size: 14px;
+  color: #b9c3de;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Layout de sección ─────────────────────────────────────────── */
+.portal-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.portal-section + .portal-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Perfil ─────────────────────────────────────────────────────── */
+.profile-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: center;
+  background: rgba(110, 168, 255, 0.06);
+  border: 1px solid rgba(110, 168, 255, 0.18);
+  border-radius: 20px;
+  padding: 28px 32px;
+  max-width: 680px;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(110, 168, 255, 0.18);
+  border: 2px solid rgba(110, 168, 255, 0.30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #6ea8ff;
+  flex-shrink: 0;
+}
+
+.profile-info__name {
+  margin: 0 0 4px 0;
+  font-size: 22px;
+}
+
+.profile-info__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 10px;
+}
+
+.profile-meta-item {
+  font-size: 13px;
+  color: #b9c3de;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-meta-item strong {
+  color: #eaf0ff;
+}
+
+/* ── Tab navigation ─────────────────────────────────────────────── */
+.portal-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  margin-bottom: 28px;
+  padding-bottom: 0;
+}
+
+.portal-tab {
+  padding: 10px 18px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: transparent;
+  color: #b9c3de;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+  position: relative;
+  bottom: -1px;
+}
+
+.portal-tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #eaf0ff;
+}
+
+.portal-tab.is-active {
+  background: rgba(110, 168, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.10);
+  border-bottom-color: #0b1220;
+  color: #6ea8ff;
+}
+
+.portal-panel { display: none; }
+.portal-panel.is-active { display: block; }
+
+/* ── Búsqueda de cursos ─────────────────────────────────────────── */
+.portal-search {
+  margin-bottom: 24px;
+  max-width: 400px;
+}
+
+/* ── Enrollment card ────────────────────────────────────────────── */
+.enr-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.enr-card__head {
+  padding: 18px 20px 14px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.enr-card__title {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.enr-card__sub {
+  font-size: 12px;
+  color: #b9c3de;
+}
+
+.enr-card__body {
+  padding: 14px 20px;
+  flex: 1;
+}
+
+.enr-card__footer {
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Average badge */
+.avg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.avg-badge--good   { background: rgba(74,222,128,0.12); border: 1px solid rgba(74,222,128,0.25); color: #4ade80; }
+.avg-badge--mid    { background: rgba(250,204,21,0.12);  border: 1px solid rgba(250,204,21,0.25);  color: #facc15; }
+.avg-badge--low    { background: rgba(251,113,133,0.12); border: 1px solid rgba(251,113,133,0.25); color: #fb7185; }
+.avg-badge--none   { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); color: #b9c3de; }
+
+/* Status badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-badge--active    { background: rgba(74,222,128,0.12); border: 1px solid rgba(74,222,128,0.25); color: #4ade80; }
+.status-badge--dropped   { background: rgba(251,113,133,0.12); border: 1px solid rgba(251,113,133,0.25); color: #fb7185; }
+.status-badge--completed { background: rgba(110,168,255,0.12); border: 1px solid rgba(110,168,255,0.25); color: #6ea8ff; }
+
+/* ── Grades table ───────────────────────────────────────────────── */
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.grades-table th,
+.grades-table td {
+  padding: 7px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.grades-table th {
+  color: #b9c3de;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.grades-table td { color: #eaf0ff; }
+
+/* ── Schedules list ─────────────────────────────────────────────── */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #b9c3de;
+}
+
+.schedule-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6ea8ff;
+  flex-shrink: 0;
+}
+
+/* ── Course catalog card ────────────────────────────────────────── */
+.cat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.15s;
+}
+
+.cat-card:hover {
+  border-color: rgba(110, 168, 255, 0.28);
+}
+
+.cat-card.is-enrolled {
+  border-color: rgba(74, 222, 128, 0.20);
+  background: rgba(74, 222, 128, 0.03);
+}
+
+.cat-card__title {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.cat-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cat-card__desc {
+  font-size: 13px;
+  color: #b9c3de;
+  line-height: 1.55;
+  margin: 0;
+  flex: 1;
+}
+
+.cat-card__actions {
+  margin-top: auto;
+}
+
+/* ── Grid de cursos ─────────────────────────────────────────────── */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ── Empty / loading states ─────────────────────────────────────── */
+.state-msg {
+  padding: 40px 20px;
+  text-align: center;
+  color: #b9c3de;
+  font-size: 14px;
+}
+
+.state-msg__icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ── Collapsible grades toggle ──────────────────────────────────── */
+.grades-toggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 8px;
+  color: #b9c3de;
+  font-size: 12px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.grades-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #eaf0ff;
+}
+
+.grades-collapse { display: none; margin-top: 10px; }
+.grades-collapse.is-open { display: block; }
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .courses-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .profile-avatar { margin: 0 auto; }
+  .profile-info__meta { justify-content: center; }
+  .courses-grid { grid-template-columns: 1fr; }
+}

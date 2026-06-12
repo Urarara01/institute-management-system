@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDU+ Corp | Educacion de Calidad</title>
+  <link rel="stylesheet" href="css/00-utils.css" />
+  <link rel="stylesheet" href="css/01-body.css" />
+  <link rel="stylesheet" href="css/02-container-section.css" />
+  <link rel="stylesheet" href="css/03-header.css" />
+  <link rel="stylesheet" href="css/04-nav.css" />
+  <link rel="stylesheet" href="css/05-buttons.css" />
+  <link rel="stylesheet" href="css/06-hero.css" />
+  <link rel="stylesheet" href="css/07-card-grid.css" />
+  <link rel="stylesheet" href="css/08-panels.css" />
+  <link rel="stylesheet" href="css/09-courses.css" />
+  <link rel="stylesheet" href="css/10-resources.css" />
+  <link rel="stylesheet" href="css/11-form.css" />
+  <link rel="stylesheet" href="css/12-footer.css" />
+  <link rel="stylesheet" href="css/13-modal.css" />
+  <link rel="stylesheet" href="css/14-responsive.css" />
+  <link rel="stylesheet" href="css/15-animations.css" />
+</head>
+<body class="page-animate">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__logo">EC</span>
+        <span class="brand__name">EDU+ Corp</span>
+      </a>
+      <nav class="nav" id="mainNav" aria-label="Navegacion principal">
+        <a class="nav__link nav__link--active" href="index.html">Inicio</a>
+        <a class="nav__link" href="nosotros.html">Nosotros</a>
+        <a class="nav__link" href="servicios.html">Servicios</a>
+        <a class="nav__link" href="portafolio.html">Portafolio</a>
+        <a class="nav__link" href="contacto.html">Contacto</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#login" id="portalLink">Portal</a>
+        <a class="btn btn--primary" href="#registro">Solicitar</a>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="inicio">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+
+        <!-- IZQUIERDA: Slider -->
+        <div class="hero__content">
+          <div class="hero-slider" aria-label="Galeria EDU+ Corp">
+            <div class="hero-slider__track">
+
+              <article class="hero-slider__slide is-active">
+                <img src="img/estudiante.jpg" alt="Estudiante aprendiendo con laptop y auriculares" />
+                <div class="hero-slider__caption">
+                  <span class="badge">Presencia digital corporativa 2026</span>
+                  <h1 class="hero__title">EDU+ Corp</h1>
+                  <p class="hero__subtitle">Formacion continua, asesorias y cursos para tu futuro profesional.</p>
+                  <div class="hero__buttons">
+                    <a class="btn btn--primary" href="servicios.html">Ver servicios</a>
+                    <a class="btn btn--secondary" href="contacto.html">Contactanos</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="hero-slider__slide">
+                <img src="img/slider/slide-3.webp" alt="Estudiantes en clases virtuales" />
+                <div class="hero-slider__caption">
+                  <span class="badge">Clases Virtuales 2026</span>
+                  <h2 class="hero__title">Aprendizaje para todos</h2>
+                  <p class="hero__subtitle">Ninos y jovenes aprendiendo con tecnologia desde casa.</p>
+                  <div class="hero__buttons">
+                    <a class="btn btn--primary" href="servicios.html">Ver programas</a>
+                    <a class="btn btn--secondary" href="nosotros.html">Conocenos</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="hero-slider__slide">
+                <img src="img/slider/slide-4.png" alt="Educacion Corp - Programacion y tecnologia" />
+                <div class="hero-slider__caption hero-slider__caption--light">
+                  <span class="badge">Tecnologia e Innovacion 2026</span>
+                  <h2 class="hero__title">Programacion Web</h2>
+                  <p class="hero__subtitle">Aprende a construir sitios web profesionales con HTML, CSS y JavaScript.</p>
+                  <div class="hero__buttons">
+                    <a class="btn btn--primary" href="servicios.html">Explorar curso</a>
+                    <a class="btn btn--secondary" href="portafolio.html">Ver portafolio</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="hero-slider__slide">
+                <img src="img/slider/slide-1.JPG" alt="Formacion continua 2026" />
+                <div class="hero-slider__caption">
+                  <span class="badge">Matriculas Abiertas 2026</span>
+                  <h2 class="hero__title">Matriculas Abiertas</h2>
+                  <p class="hero__subtitle">Unete a nuestros programas y da el siguiente paso en tu carrera.</p>
+                  <div class="hero__buttons">
+                    <a class="btn btn--primary" href="contacto.html">Inscribete</a>
+                    <a class="btn btn--secondary" href="servicios.html">Ver oferta</a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+            <button class="hero-slider__ctrl hero-slider__ctrl--prev" aria-label="Anterior" data-hs="prev">&#8249;</button>
+            <button class="hero-slider__ctrl hero-slider__ctrl--next" aria-label="Siguiente" data-hs="next">&#8250;</button>
+
+            <div class="hero-slider__dots" role="tablist">
+              <button role="tab" aria-selected="true"  data-hs="dot" data-index="0"></button>
+              <button role="tab" aria-selected="false" data-hs="dot" data-index="1"></button>
+              <button role="tab" aria-selected="false" data-hs="dot" data-index="2"></button>
+              <button role="tab" aria-selected="false" data-hs="dot" data-index="3"></button>
+            </div>
+          </div>
+
+          <!-- Stats bajo el slider -->
+          <div class="hero__stats">
+            <div class="hero__stat"><strong>+500</strong><small>Estudiantes</small></div>
+            <div class="hero__stat"><strong>6</strong><small>Programas</small></div>
+            <div class="hero__stat"><strong>100%</strong><small>Online/Presencial</small></div>
+            <div class="hero__stat"><strong>&#10003;</strong><small>Certificados</small></div>
+          </div>
+        </div>
+
+        <!-- DERECHA: Formulario -->
+        <div class="hero__panels-col">
+          <div class="hero__card regform-card">
+            <div class="hero__cardTop">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="hero__cardTitle">Registrate Ahora</span>
+            </div>
+            <div class="regform">
+              <div class="regform__head">
+                <h3 class="regform__title">Quieres mas informacion?</h3>
+                <p class="regform__sub">Completa el formulario y te contactamos</p>
+              </div>
+              <form class="regform__form" id="registerForm" novalidate>
+                <div class="regform__row regform__row--full">
+                  <input class="regform__input" type="text" name="nombres" placeholder="Nombres" autocomplete="given-name" />
+                  <span class="regform__err" data-err="nombres"></span>
+                </div>
+                <div class="regform__row regform__row--half">
+                  <div>
+                    <input class="regform__input" type="text" name="apellido_paterno" placeholder="Apellido Paterno" autocomplete="family-name" />
+                    <span class="regform__err" data-err="apellido_paterno"></span>
+                  </div>
+                  <div>
+                    <input class="regform__input" type="text" name="apellido_materno" placeholder="Apellido Materno" />
+                    <span class="regform__err" data-err="apellido_materno"></span>
+                  </div>
+                </div>
+                <div class="regform__row regform__row--full">
+                  <input class="regform__input" type="text" name="dni" placeholder="DNI" maxlength="8" inputmode="numeric" />
+                  <span class="regform__err" data-err="dni"></span>
+                </div>
+                <div class="regform__row regform__row--full">
+                  <select class="regform__input regform__select" name="carrera">
+                    <option value="" disabled selected>Selecciona una carrera</option>
+                    <option value="prog_web">Programacion Web</option>
+                    <option value="ofimatica">Ofimatica</option>
+                    <option value="asesoria">Asesorias Academicas</option>
+                    <option value="ingles">Ingles Academico</option>
+                    <option value="preu">Pre-Universitaria</option>
+                    <option value="cv">Taller CV y Entrevista</option>
+                  </select>
+                  <span class="regform__err" data-err="carrera"></span>
+                </div>
+                <div class="regform__row regform__row--full">
+                  <input class="regform__input" type="tel" name="telefono" placeholder="Telefono" inputmode="tel" />
+                  <span class="regform__err" data-err="telefono"></span>
+                </div>
+                <div class="regform__row regform__row--full">
+                  <input class="regform__input" type="email" name="correo_reg" placeholder="Correo electronico" autocomplete="email" />
+                  <span class="regform__err" data-err="correo_reg"></span>
+                </div>
+                <div class="regform__row regform__row--full">
+                  <input class="regform__input" type="password" name="password" placeholder="Crea una contraseña (min. 8 caracteres)" autocomplete="new-password" />
+                  <span class="regform__err" data-err="password"></span>
+                </div>
+                <div class="regform__check">
+                  <input type="checkbox" id="chk1" name="privacidad" />
+                  <label for="chk1">He leido y acepto las <a href="contacto.html" class="regform__link">Politicas de Privacidad</a></label>
+                </div>
+                <span class="regform__err" data-err="privacidad"></span>
+                <div class="regform__check">
+                  <input type="checkbox" id="chk2" name="publicidad" />
+                  <label for="chk2">Autorizo recibir informacion sobre la oferta de EDU+ Corp segun condiciones <a href="contacto.html" class="regform__link">aqui</a></label>
+                </div>
+                <div class="regform__actions">
+                  <button class="btn btn--primary regform__submit" type="submit">Enviar</button>
+                </div>
+                <div id="registerNotice" class="hidden"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- QUE OFRECEMOS -->
+    <section class="section reveal" id="resumen" data-delay="2">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Que ofrece EDU+ Corp?</h2>
+          <p class="section__desc">Un canal oficial con informacion institucional, servicios y contacto, con diseno moderno y accesible.</p>
+        </div>
+        <div class="grid grid--4">
+          <article class="card">
+            <h3 class="card__title">Nosotros</h3>
+            <p class="card__text">Mision, vision, equipo y valores para reforzar confianza.</p>
+            <a class="link" href="nosotros.html">Ver seccion &rarr;</a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Servicios</h3>
+            <p class="card__text">Catalogo de cursos y asesorias con enfoque profesional.</p>
+            <a class="link" href="servicios.html">Explorar &rarr;</a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Portafolio</h3>
+            <p class="card__text">Galeria de proyectos, evidencias y documentacion.</p>
+            <a class="link" href="portafolio.html">Abrir portafolio &rarr;</a>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Contacto</h3>
+            <p class="card__text">Formulario con validacion y mensajes de confirmacion.</p>
+            <a class="link" href="contacto.html">Contactar &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENFOQUE -->
+    <!-- POR QUE ELEGIRNOS -->
+    <section class="section section--alt reveal" data-delay="3">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">&#191;Por qu&#233; elegirnos?</h2>
+          <p class="section__desc">Somos tu mejor opci&#243;n para aprender y crecer profesionalmente.</p>
+        </div>
+        <div class="grid grid--3">
+
+          <div class="reveal panel" data-delay="1">
+            <div class="panel__icon">&#127891;</div>
+            <h3 class="panel__title">Docentes Especializados</h3>
+            <p class="panel__text">Profesionales activos en el mercado laboral con amplia experiencia en ense&#241;anza y pr&#225;ctica real.</p>
+            <a class="btn btn--secondary btn--small" href="nosotros.html">Conoce al equipo</a>
+          </div>
+
+          <div class="reveal panel" data-delay="2">
+            <div class="panel__icon">&#128187;</div>
+            <h3 class="panel__title">Modalidad Flexible</h3>
+            <p class="panel__text">Clases online, presenciales e h&#237;bridas. T&#250; eliges c&#243;mo y cu&#225;ndo aprender seg&#250;n tu disponibilidad.</p>
+            <a class="btn btn--secondary btn--small" href="servicios.html">Ver programas</a>
+          </div>
+
+          <div class="reveal panel" data-delay="3">
+            <div class="panel__icon">&#127942;</div>
+            <h3 class="panel__title">Certificaci&#243;n Inmediata</h3>
+            <p class="panel__text">Al concluir cada programa recib&#233; tu certificado digital avalado y listo para presentar a empleadores.</p>
+            <a class="btn btn--secondary btn--small" href="contacto.html">Inscr&#237;bete</a>
+          </div>
+
+        </div>
+
+        <!-- Testimonios -->
+        <div class="testimonios">
+          <div class="testimonio reveal" data-delay="1">
+            <p class="testimonio__texto">"Gracias a EDU+ Corp consegu&#237; mi primer trabajo como desarrollador web en solo 4 meses."</p>
+            <div class="testimonio__autor">
+              <span class="testimonio__nombre">Carlos M.</span>
+              <span class="testimonio__rol">Egresado &#8212; Programaci&#243;n Web</span>
+            </div>
+          </div>
+          <div class="testimonio reveal" data-delay="2">
+            <p class="testimonio__texto">"Las asesor&#237;as acad&#233;micas me ayudaron a aprobar mis ex&#225;menes con excelentes notas."</p>
+            <div class="testimonio__autor">
+              <span class="testimonio__nombre">Ana R.</span>
+              <span class="testimonio__rol">Estudiante &#8212; Asesor&#237;as Acad&#233;micas</span>
+            </div>
+          </div>
+          <div class="testimonio reveal" data-delay="3">
+            <p class="testimonio__texto">"El taller de CV transform&#243; por completo c&#243;mo me presento a las entrevistas. &#161;100% recomendado!"</p>
+            <div class="testimonio__autor">
+              <span class="testimonio__nombre">Luis P.</span>
+              <span class="testimonio__rol">Egresado &#8212; Taller CV y Entrevista</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <div class="brand brand--footer">
+          <span class="brand__logo">EC</span>
+          <span class="brand__name">EDU+ Corp</span>
+        </div>
+        <p class="footer__text">Sitio corporativo para centralizar informacion institucional, servicios y contacto en un dominio propio.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Secciones</h4>
+        <a class="footer__link" href="nosotros.html">Nosotros</a>
+        <a class="footer__link" href="servicios.html">Servicios</a>
+        <a class="footer__link" href="portafolio.html">Portafolio</a>
+        <a class="footer__link" href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Contacto</h4>
+        <a class="footer__link" href="contacto.html">Formulario de contacto</a>
+        <a class="footer__link" href="#login">Portal de acceso</a>
+        <a class="footer__link" href="contacto.html">Solicitar informacion</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>&copy; <span id="year">2026</span> EDU+ Corp. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/auth.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var toggle = document.getElementById('navToggle');
+      var nav    = document.getElementById('mainNav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          nav.classList.toggle('nav--open');
+        });
+      }
+    })();
+
+    // Hero Slider
+    (function () {
+      var slider  = document.querySelector('.hero-slider');
+      if (!slider) return;
+      var track   = slider.querySelector('.hero-slider__track');
+      var slides  = Array.prototype.slice.call(slider.querySelectorAll('.hero-slider__slide'));
+      var dots    = Array.prototype.slice.call(slider.querySelectorAll('[data-hs="dot"]'));
+      var btnPrev = slider.querySelector('[data-hs="prev"]');
+      var btnNext = slider.querySelector('[data-hs="next"]');
+      var idx = 0, timer = null;
+
+      function goTo(i) {
+        idx = (i + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+        slides.forEach(function (s, k) { s.classList.toggle('is-active', k === idx); });
+        dots.forEach(function (d, k)   { d.setAttribute('aria-selected', String(k === idx)); });
+      }
+      function start() { stop(); timer = setInterval(function () { goTo(idx + 1); }, 5000); }
+      function stop()  { if (timer) { clearInterval(timer); timer = null; } }
+
+      if (btnPrev) btnPrev.addEventListener('click', function () { goTo(idx - 1); });
+      if (btnNext) btnNext.addEventListener('click', function () { goTo(idx + 1); });
+      dots.forEach(function (d) {
+        d.addEventListener('click', function () { goTo(Number(d.getAttribute('data-index'))); });
+      });
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+
+      var startX = 0;
+      track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend',   function (e) {
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) goTo(dx > 0 ? idx - 1 : idx + 1);
+      });
+
+      goTo(0);
+      start();
+    })();
+  </script>
+
+</body>
+</html>

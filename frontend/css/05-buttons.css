@@ -1,0 +1,55 @@
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn--small{
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+}
+
+.btn--primary{
+  background: #6ea8ff;
+  border-color: rgba(110,168,255,0.35);
+  color: #07101f;
+}
+
+.btn--secondary{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.10);
+  color: #eaf0ff;
+}
+
+.btn--ghost{
+  background: transparent;
+  border-color: rgba(255,255,255,0.10);
+  color: #eaf0ff;
+}
+
+.btn--primary:hover{ opacity: 0.95; }
+.btn--secondary:hover{ background: rgba(255,255,255,0.12); }
+.btn--ghost:hover{ background: rgba(255,255,255,0.06); }
+
+
+.btn:focus{ outline: none; }
+.btn:focus-visible{
+  outline: 2px solid rgba(110,168,255,0.65);
+  outline-offset: 2px;
+}
+
+/* Buttons should never look like links */
+.btn{ text-decoration: none; }

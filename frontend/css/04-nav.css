@@ -1,0 +1,27 @@
+.nav{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav__link{
+  color: #b9c3de;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.nav__link:hover{
+  color: #eaf0ff;
+  background: rgba(255,255,255,0.05);
+}
+
+
+.nav__link{ text-decoration: none; }
+.nav__link:hover{ text-decoration: none; }
+
+
+.nav__link{ text-decoration: none; }
+.nav__link:hover{ text-decoration: none; }

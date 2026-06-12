@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDU+ Corp | Servicios</title>
+
+  <link rel="stylesheet" href="css/00-utils.css" />
+  <link rel="stylesheet" href="css/01-body.css" />
+  <link rel="stylesheet" href="css/02-container-section.css" />
+  <link rel="stylesheet" href="css/03-header.css" />
+  <link rel="stylesheet" href="css/04-nav.css" />
+  <link rel="stylesheet" href="css/05-buttons.css" />
+  <link rel="stylesheet" href="css/06-hero.css" />
+  <link rel="stylesheet" href="css/07-card-grid.css" />
+  <link rel="stylesheet" href="css/08-panels.css" />
+  <link rel="stylesheet" href="css/09-courses.css" />
+  <link rel="stylesheet" href="css/10-resources.css" />
+  <link rel="stylesheet" href="css/11-form.css" />
+  <link rel="stylesheet" href="css/12-footer.css" />
+  <link rel="stylesheet" href="css/13-modal.css" />
+  <link rel="stylesheet" href="css/14-responsive.css" />
+    <link rel="stylesheet" href="css/15-animations.css">
+</head>
+
+<body class="page-animate">
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__logo">EC</span>
+        <span class="brand__name">EDU+ Corp</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="index.html">Inicio</a>
+        <a class="nav__link" href="nosotros.html">Nosotros</a>
+        <a class="nav__link nav__link--active" href="servicios.html">Servicios</a>
+        <a class="nav__link" href="portafolio.html">Portafolio</a>
+        <a class="nav__link" href="contacto.html">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#login">Portal</a>
+        <a class="btn btn--primary" href="#registro">Solicitar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal" data-delay="1">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Servicios / Cursos</h2>
+          <p class="section__desc">
+            Catálogo organizado para que el usuario encuentre rápido lo que necesita.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="course">
+            <div class="course__top">
+              <h3 class="course__title">Programación Web</h3>
+              <span class="pill">Modalidad: Online</span>
+            </div>
+            <p class="course__text">HTML, CSS y JavaScript con práctica y proyectos.</p>
+            <div class="course__actions">
+              <a class="btn btn--primary btn--small" href="#registro">Solicitar</a>
+              <button class="btn btn--ghost btn--small" type="button" data-action="open-demo">Ver demo</button>
+            </div>
+          </article>
+
+          <article class="course">
+            <div class="course__top">
+              <h3 class="course__title">Ofimática</h3>
+              <span class="pill">Duración: 4 semanas</span>
+            </div>
+            <p class="course__text">Word, Excel y PowerPoint con ejercicios guiados.</p>
+            <div class="course__actions">
+              <a class="btn btn--primary btn--small" href="#registro">Solicitar</a>
+              <a class="btn btn--ghost btn--small" href="contacto.html">Consultar</a>
+            </div>
+          </article>
+
+          <article class="course">
+            <div class="course__top">
+              <h3 class="course__title">Asesorías Académicas</h3>
+              <span class="pill">Soporte</span>
+            </div>
+            <p class="course__text">Acompañamiento para tareas, proyectos y evaluación.</p>
+            <div class="course__actions">
+              <a class="btn btn--primary btn--small" href="#registro">Solicitar</a>
+              <a class="btn btn--ghost btn--small" href="nosotros.html">Equipo</a>
+            </div>
+          </article>
+
+          <article class="course">
+            <div class="course__top">
+              <h3 class="course__title">Inglés Académico</h3>
+              <span class="pill">Online</span>
+            </div>
+            <p class="course__text">Lectura, escritura y conversación aplicada.</p>
+            <div class="course__actions">
+              <a class="btn btn--primary btn--small" href="#registro">Solicitar</a>
+              <a class="btn btn--ghost btn--small" href="contacto.html">Soporte</a>
+            </div>
+          </article>
+
+          <article class="course">
+            <div class="course__top">
+              <h3 class="course__title">Preparación Pre-Universitaria</h3>
+              <span class="pill">Plan</span>
+            </div>
+            <p class="course__text">Plan por temas + prácticas + seguimiento (demo).</p>
+            <div class="course__actions">
+              <a class="btn btn--primary btn--small" href="#registro">Solicitar</a>
+              <button class="btn btn--ghost btn--small" type="button" data-action="open-request">Cotizar</button>
+            </div>
+          </article>
+
+          <article class="course">
+            <div class="course__top">
+              <h3 class="course__title">Taller CV y Entrevista</h3>
+              <span class="pill">1 sesión</span>
+            </div>
+            <p class="course__text">Optimización de CV, LinkedIn y preparación laboral.</p>
+            <div class="course__actions">
+              <a class="btn btn--primary btn--small" href="#registro">Solicitar</a>
+              <a class="btn btn--ghost btn--small" href="portafolio.html">Ver ejemplos</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="notice notice--ok" id="servicesNote">
+          Consejo: usa el botón <span class="kbd">Solicitar</span> para abrir el formulario (demo) y dejar tu requerimiento.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <div class="brand brand--footer">
+          <span class="brand__logo">EC</span>
+          <span class="brand__name">EDU+ Corp</span>
+        </div>
+        <p class="footer__text">
+          Sitio corporativo para centralizar información institucional, servicios y contacto en un dominio propio.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Secciones</h4>
+        <a class="footer__link" href="nosotros.html">Nosotros</a>
+        <a class="footer__link" href="servicios.html">Servicios</a>
+        <a class="footer__link" href="portafolio.html">Portafolio</a>
+        <a class="footer__link" href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Contacto</h4>
+        <a class="footer__link" href="contacto.html">Formulario de contacto</a>
+        <a class="footer__link" href="#login">Portal </a>
+        <a class="footer__link" href="#registro">Solicitar información </a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> EDU+ Corp.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

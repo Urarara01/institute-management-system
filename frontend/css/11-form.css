@@ -1,0 +1,200 @@
+.form{
+  background: rgba(255,255,255,0.04);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.form__row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.field{
+  display: grid;
+  gap: 8px;
+}
+
+.field__label{
+  color: #b9c3de;
+  font-size: 14px;
+}
+
+.field__error{
+  display: block;
+  min-height: 16px;
+  font-size: 13px;
+  color: #fb7185;
+}
+
+.field__input{
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.18);
+  color: #eaf0ff;
+  outline: none;
+}
+
+.field__textarea{
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form__actions{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+
+/* ===== Form layout fixes (prevent overflow in grid) ===== */
+.field{ min-width: 0; }
+.field__input{ min-width: 0; box-sizing: border-box; }
+select.field__input{ appearance: auto; }
+
+
+/* ===== Hero Registration Form Panel ===== */
+.regform {
+  padding: 20px 20px 8px 20px;
+}
+
+.regform__head {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.regform__title {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  color: #eaf0ff;
+  font-weight: 700;
+}
+
+.regform__sub {
+  margin: 0;
+  font-size: 13px;
+  color: #8a9cc0;
+}
+
+.regform__form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.regform__row--full {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.regform__row--half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.regform__input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: #eaf0ff;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+  box-sizing: border-box;
+}
+
+.regform__input::placeholder {
+  color: #5d6f90;
+}
+
+.regform__input:focus {
+  border-color: rgba(110,168,255,0.50);
+  background: rgba(110,168,255,0.08);
+}
+
+.regform__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a9cc0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+.regform__select option {
+  background: #0b1220;
+  color: #eaf0ff;
+}
+
+.regform__err {
+  font-size: 11px;
+  color: #ff6b8a;
+  min-height: 14px;
+  display: block;
+  padding-left: 2px;
+}
+
+.regform__check {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 11px;
+  color: #8a9cc0;
+  line-height: 1.5;
+}
+
+.regform__check input[type="checkbox"] {
+  margin-top: 2px;
+  accent-color: #6ea8ff;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.regform__check label {
+  cursor: pointer;
+}
+
+.regform__link {
+  color: #6ea8ff;
+  text-decoration: underline;
+}
+
+.regform__actions {
+  margin-top: 8px;
+}
+
+.regform__submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Responsive: half row collapses on very small screens */
+@media (max-width: 400px) {
+  .regform__row--half {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDU+ Corp | Portafolio</title>
+
+  <link rel="stylesheet" href="css/00-utils.css" />
+  <link rel="stylesheet" href="css/01-body.css" />
+  <link rel="stylesheet" href="css/02-container-section.css" />
+  <link rel="stylesheet" href="css/03-header.css" />
+  <link rel="stylesheet" href="css/04-nav.css" />
+  <link rel="stylesheet" href="css/05-buttons.css" />
+  <link rel="stylesheet" href="css/06-hero.css" />
+  <link rel="stylesheet" href="css/07-card-grid.css" />
+  <link rel="stylesheet" href="css/08-panels.css" />
+  <link rel="stylesheet" href="css/09-courses.css" />
+  <link rel="stylesheet" href="css/10-resources.css" />
+  <link rel="stylesheet" href="css/11-form.css" />
+  <link rel="stylesheet" href="css/12-footer.css" />
+  <link rel="stylesheet" href="css/13-modal.css" />
+  <link rel="stylesheet" href="css/14-responsive.css" />
+    <link rel="stylesheet" href="css/15-animations.css">
+</head>
+
+<body class="page-animate">
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__logo">EC</span>
+        <span class="brand__name">EDU+ Corp</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="index.html">Inicio</a>
+        <a class="nav__link" href="nosotros.html">Nosotros</a>
+        <a class="nav__link" href="servicios.html">Servicios</a>
+        <a class="nav__link nav__link--active" href="portafolio.html">Portafolio</a>
+        <a class="nav__link" href="contacto.html">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#login">Portal</a>
+        <a class="btn btn--primary" href="#registro">Solicitar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--alt reveal" data-delay="1">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Portafolio / Galería</h2>
+          <p class="section__desc">
+            Conoce nuestros trabajos realizados: arquitectura web, diseño de interfaces, sitio funcional y videos demostrativos.
+          </p>
+        </div>
+
+        <div class="resources">
+          <div class="reveal resource" data-delay="2">
+            <div class="resource__meta">
+              <span class="chip">MAPA</span>
+              <h3 class="resource__title">Mapa de sitio</h3>
+            </div>
+            <p class="resource__text">Diagrama jerárquico con Inicio, Nosotros, Servicios, Portafolio y Contacto.</p>
+            <div class="resource__actions">
+              <button class="btn btn--secondary btn--small" type="button" data-action="open-portfolio" data-title="Mapa de sitio" data-desc="Estructura jerárquica para navegación intuitiva en máximo 3 clics (concepto demo).">Ver</button>
+              <button class="btn btn--ghost btn--small" type="button" data-action="save-item" data-key="mapa">Guardar</button>
+            </div>
+          </div>
+
+          <div class="reveal resource" data-delay="3">
+            <div class="resource__meta">
+              <span class="chip">DISEÑO UI</span>
+              <h3 class="resource__title">Diseños de interfaz</h3>
+            </div>
+            <p class="resource__text">Prototipos de alta fidelidad: layout, tipografía, colores y componentes.</p>
+            <div class="resource__actions">
+              <button class="btn btn--secondary btn--small" type="button" data-action="open-portfolio" data-title="Diseños de interfaz" data-desc="Guía visual para construir cada página con consistencia (concepto demo).">Ver</button>
+              <button class="btn btn--ghost btn--small" type="button" data-action="save-item" data-key="diseños de interfaz">Guardar</button>
+            </div>
+          </div>
+
+          <div class="reveal resource" data-delay="4">
+            <div class="resource__meta">
+              <span class="chip">WEB</span>
+              <h3 class="resource__title">Sitio funcional</h3>
+            </div>
+            <p class="resource__text">HTML + CSS modular + JS con validación, modales y navegación.</p>
+            <div class="resource__actions">
+              <button class="btn btn--secondary btn--small" type="button" data-action="open-portfolio" data-title="Sitio funcional" data-desc="Versión estática y responsiva con buenas prácticas y UI moderna (demo).">Detalles</button>
+              <a class="btn btn--ghost btn--small" href="index.html">Ir al sitio</a>
+            </div>
+          </div>
+
+          <div class="reveal resource" data-delay="1">
+            <div class="resource__meta">
+              <span class="chip">VIDEO</span>
+              <h3 class="resource__title">Demo Reel</h3>
+            </div>
+            <p class="resource__text">Presentación del funcionamiento del sitio y aspectos técnicos (3–5 min).</p>
+            <div class="resource__actions">
+              <button class="btn btn--secondary btn--small" type="button" data-action="open-portfolio" data-title="Demo Reel" data-desc="Guion sugerido: recorrido por páginas, navegación, formulario y modales (demo).">Ver guion</button>
+              <button class="btn btn--ghost btn--small" type="button" data-action="open-request">Solicitar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice" id="savedNotice">
+          Guardados: <strong id="savedCount">0</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <div class="brand brand--footer">
+          <span class="brand__logo">EC</span>
+          <span class="brand__name">EDU+ Corp</span>
+        </div>
+        <p class="footer__text">
+          Sitio corporativo para centralizar información institucional, servicios y contacto en un dominio propio.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Secciones</h4>
+        <a class="footer__link" href="nosotros.html">Nosotros</a>
+        <a class="footer__link" href="servicios.html">Servicios</a>
+        <a class="footer__link" href="portafolio.html">Portafolio</a>
+        <a class="footer__link" href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Contacto</h4>
+        <a class="footer__link" href="contacto.html">Formulario de contacto</a>
+        <a class="footer__link" href="#login">Portal </a>
+        <a class="footer__link" href="#registro">Solicitar información </a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> EDU+ Corp.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

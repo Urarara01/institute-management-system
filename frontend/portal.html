@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal del Estudiante — EDU+ Corp</title>
+  <link rel="stylesheet" href="css/00-utils.css" />
+  <link rel="stylesheet" href="css/01-body.css" />
+  <link rel="stylesheet" href="css/02-container-section.css" />
+  <link rel="stylesheet" href="css/03-header.css" />
+  <link rel="stylesheet" href="css/04-nav.css" />
+  <link rel="stylesheet" href="css/05-buttons.css" />
+  <link rel="stylesheet" href="css/07-card-grid.css" />
+  <link rel="stylesheet" href="css/08-panels.css" />
+  <link rel="stylesheet" href="css/09-courses.css" />
+  <link rel="stylesheet" href="css/11-form.css" />
+  <link rel="stylesheet" href="css/12-footer.css" />
+  <link rel="stylesheet" href="css/13-modal.css" />
+  <link rel="stylesheet" href="css/14-responsive.css" />
+  <link rel="stylesheet" href="css/16-portal.css" />
+</head>
+<body class="page-animate">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__logo">EC</span>
+        <span class="brand__name">EDU+ Corp</span>
+      </a>
+      <div class="portal-header__user">
+        <span class="portal-header__name" id="headerStudentName">Portal</span>
+        <button class="btn btn--ghost btn--small" id="logoutBtn" type="button">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══ SECCIÓN: PERFIL ══════════════════════════════════════════ -->
+    <section class="portal-section">
+      <div class="container">
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <div>
+            <h1 style="margin:0 0 4px 0;font-size:24px;" id="pageTitle">Mi Portal</h1>
+            <p style="margin:0;color:#b9c3de;font-size:14px;">Bienvenido a tu espacio académico.</p>
+          </div>
+        </div>
+
+        <!-- Profile card -->
+        <div class="profile-card" id="profileCard">
+          <div class="profile-avatar" id="profileAvatar">?</div>
+          <div class="profile-info">
+            <h2 class="profile-info__name" id="profileName">Cargando…</h2>
+            <p style="margin:0;font-size:13px;color:#b9c3de;" id="profileEmail">—</p>
+            <div class="profile-info__meta">
+              <span class="profile-meta-item">
+                🎓 Carrera: <strong id="profileCareer">—</strong>
+              </span>
+              <span class="profile-meta-item">
+                🪪 Código: <strong id="profileId">—</strong>
+              </span>
+              <span class="profile-meta-item">
+                📞 Teléfono: <strong id="profilePhone">—</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ CONTENIDO PRINCIPAL (TABS) ═════════════════════════════ -->
+    <section class="portal-section">
+      <div class="container">
+
+        <!-- Tab nav -->
+        <div class="portal-tabs" role="tablist">
+          <button class="portal-tab is-active" data-tab="enrollments" role="tab" aria-selected="true">
+            📚 Mis cursos matriculados
+          </button>
+          <button class="portal-tab" data-tab="catalog" role="tab" aria-selected="false">
+            🔍 Catálogo de cursos
+          </button>
+        </div>
+
+        <!-- Panel: Enrollments -->
+        <div class="portal-panel is-active" id="panel-enrollments" role="tabpanel">
+
+          <div id="enrollmentsContainer">
+            <div class="state-msg">
+              <span class="state-msg__icon">⏳</span>
+              Cargando tus matrículas…
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Panel: Catalog -->
+        <div class="portal-panel" id="panel-catalog" role="tabpanel">
+
+          <div class="portal-search">
+            <input
+              class="field__input"
+              type="text"
+              id="courseSearch"
+              placeholder="Buscar curso por nombre o código…"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="courses-grid" id="coursesContainer">
+            <div class="state-msg" style="grid-column:1/-1;">
+              <span class="state-msg__icon">⏳</span>
+              Cargando catálogo de cursos…
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <div class="brand brand--footer">
+          <span class="brand__logo">EC</span>
+          <span class="brand__name">EDU+ Corp</span>
+        </div>
+        <p class="footer__text">Portal académico para alumnos del instituto.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Navegación</h4>
+        <a class="footer__link" href="index.html">Inicio</a>
+        <a class="footer__link" href="servicios.html">Servicios</a>
+        <a class="footer__link" href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Cuenta</h4>
+        <a class="footer__link" href="#" id="footerLogout">Cerrar sesión</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>&copy; <span id="year">2026</span> EDU+ Corp. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/auth.js"></script>
+  <script src="js/portal.js"></script>
+
+</body>
+</html>

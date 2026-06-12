@@ -1,0 +1,30 @@
+/* Box sizing */
+*, *::before, *::after{ box-sizing: border-box; }
+
+/* Utilidades simples extra (no rompen tu estilo) */
+.hidden{display:none!important;}
+.notice{margin-top:12px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);color:#b9c3de;}
+.notice--ok{border-color:rgba(56,189,248,.25);}
+.notice--bad{border-color:rgba(251,113,133,.25);}
+
+/* estilo simple para teclas (usado en Servicios) */
+.kbd{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.18);
+  color:#eaf0ff;
+  font-size:13px;
+}
+
+
+/* Links: look clean (no underline) */
+a{ text-decoration: none; color: inherit; }
+a:hover{ text-decoration: none; }
+
+html{ scroll-behavior: smooth; }
+
+/* Links: clean */
+a{ text-decoration: none; color: inherit; }
+a:hover{ text-decoration: none; }

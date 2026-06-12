@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDU+ Corp | Contacto</title>
+
+  <link rel="stylesheet" href="css/00-utils.css" />
+  <link rel="stylesheet" href="css/01-body.css" />
+  <link rel="stylesheet" href="css/02-container-section.css" />
+  <link rel="stylesheet" href="css/03-header.css" />
+  <link rel="stylesheet" href="css/04-nav.css" />
+  <link rel="stylesheet" href="css/05-buttons.css" />
+  <link rel="stylesheet" href="css/06-hero.css" />
+  <link rel="stylesheet" href="css/07-card-grid.css" />
+  <link rel="stylesheet" href="css/08-panels.css" />
+  <link rel="stylesheet" href="css/09-courses.css" />
+  <link rel="stylesheet" href="css/10-resources.css" />
+  <link rel="stylesheet" href="css/11-form.css" />
+  <link rel="stylesheet" href="css/12-footer.css" />
+  <link rel="stylesheet" href="css/13-modal.css" />
+  <link rel="stylesheet" href="css/14-responsive.css" />
+    <link rel="stylesheet" href="css/15-animations.css">
+</head>
+
+<body class="page-animate">
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__logo">EC</span>
+        <span class="brand__name">EDU+ Corp</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="index.html">Inicio</a>
+        <a class="nav__link" href="nosotros.html">Nosotros</a>
+        <a class="nav__link" href="servicios.html">Servicios</a>
+        <a class="nav__link" href="portafolio.html">Portafolio</a>
+        <a class="nav__link nav__link--active" href="contacto.html">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#login">Portal</a>
+        <a class="btn btn--primary" href="#registro">Solicitar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal" data-delay="1">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Contacto</h2>
+          <p class="section__desc">
+            Canal directo para consultas, cotizaciones y soporte
+          </p>
+        </div>
+
+        <form class="form" id="contactForm" action="#" method="post" novalidate>
+          <div class="form__row">
+            <label class="field">
+              <span class="field__label">Nombre</span>
+              <input class="field__input" type="text" name="nombre" placeholder="Tu nombre" />
+              <span class="field__error" data-error="nombre"></span>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Correo</span>
+              <input class="field__input" type="email" name="correo" placeholder="tu@email.com" />
+              <span class="field__error" data-error="correo"></span>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field__label">Asunto</span>
+            <input class="field__input" type="text" name="asunto" placeholder="Ej: Información de servicios / Cotización" />
+            <span class="field__error" data-error="asunto"></span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Mensaje</span>
+            <textarea class="field__input field__textarea" name="mensaje" rows="5" placeholder="Cuéntanos qué necesitas..."></textarea>
+            <span class="field__error" data-error="mensaje"></span>
+          </label>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Enviar</button>
+            <button class="btn btn--ghost" type="reset">Limpiar</button>
+          </div>
+
+          <div class="notice hidden" id="contactNotice"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <div class="brand brand--footer">
+          <span class="brand__logo">EC</span>
+          <span class="brand__name">EDU+ Corp</span>
+        </div>
+        <p class="footer__text">
+          Sitio corporativo para centralizar información institucional, servicios y contacto en un dominio propio.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Secciones</h4>
+        <a class="footer__link" href="nosotros.html">Nosotros</a>
+        <a class="footer__link" href="servicios.html">Servicios</a>
+        <a class="footer__link" href="portafolio.html">Portafolio</a>
+        <a class="footer__link" href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Contacto</h4>
+        <a class="footer__link" href="contacto.html">Formulario de contacto</a>
+        <a class="footer__link" href="#login">Portal </a>
+        <a class="footer__link" href="#registro">Solicitar información </a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> EDU+ Corp.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

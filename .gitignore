@@ -1,5 +1,5 @@
 frontend/stitch_sistema_integral_educa_corp/
 *.pyc
 __pycache__/
-frontend/
+# frontend/
 db.sqlite3

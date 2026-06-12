@@ -1,0 +1,154 @@
+.modalOverlay{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* Más opaco para que no se vea tanto el fondo */
+  background: rgba(0,0,0,0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 999;
+}
+
+.modal{
+  width: 100%;
+  max-width: 520px;
+  /* Menos transparencia dentro del modal */
+  background: rgba(11,18,32,0.96);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.14);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal__head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255,255,255,0.10);
+}
+
+.modal__title{
+  margin: 0;
+  font-size: 16px;
+}
+
+.modal__close{
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.10);
+  color: #eaf0ff;
+  border-radius: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.modal__close:hover{
+  background: rgba(255,255,255,0.06);
+}
+
+.modal__body{
+  padding: 16px;
+}
+
+.modal__hint{
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #b9c3de;
+  line-height: 1.5;
+}
+
+
+/* ===== Modal Center Fix ===== */
+
+.modalOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.modal{
+  width: 100%;
+  max-width: 520px;
+  background: #0f172a;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn{
+  from{ transform: translateY(20px); opacity: 0; }
+  to{ transform: translateY(0); opacity: 1; }
+}
+
+
+
+/* ===== FORCE CENTER FIX (override) ===== */
+
+.modalOverlay{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  z-index: 9999 !important;
+}
+
+.modal{
+  margin: 0 auto !important;
+  position: relative !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+body.modal-open{
+  overflow: hidden;
+}
+
+
+/* ===== Inline notices ===== */
+.notice{
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.06);
+  color: #eaf0ff;
+  font-size: 14px;
+}
+
+.notice--success{
+  border-color: rgba(110,168,255,0.35);
+  background: rgba(110,168,255,0.10);
+  color: #eaf0ff;
+}
