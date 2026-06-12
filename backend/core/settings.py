@@ -162,5 +162,6 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5500',  # Live Server (VS Code)
     'http://192.168.18.26:3002',  # Otro equipo en la red local
     'http://192.168.18.26:3000',  # Otro equipo en la red local
+    'https://portal.urarara.online',  # Dominio de producción
 ]
 CORS_ALLOW_CREDENTIALS = True
