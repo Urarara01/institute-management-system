@@ -91,7 +91,7 @@ WorkingDirectory=$BACKEND_DIR
 Environment="DJANGO_SETTINGS_MODULE=core.settings"
 Environment="DJANGO_DEBUG=False"
 Environment="DJANGO_ALLOWED_HOSTS=$PROJECT_DOMAIN"
-ExecStart=$VENV_DIR/bin/uvicorn core.asgi:application --host 127.0.0.1 --port $DJANGO_PORT --workers 4 --proxy-headers
+ExecStart=$VENV_DIR/bin/python -m uvicorn core.asgi:application --host 127.0.0.1 --port $DJANGO_PORT --workers 4 --proxy-headers
 Restart=always
 RestartSec=5
 LimitNOFILE=65536
