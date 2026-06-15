@@ -24,9 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ro33_2-bnj1i@q&p#^miv)7r$#imo6e_^u(^f)#6hs#l*km0y@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DJANGO_DEBUG", "False").lower() in ("1", "true", "yes")
+DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "portal.urarara.online").split(",")
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '192.168.18.26',
+    'portal.urarara.online',
+]
 
 
 # Application definition
@@ -157,11 +162,14 @@ SIMPLE_JWT = {
 
 # ─── CORS ─────────────────────────────────────────────────────────────────────
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',  # Vite/React dev
-    'http://localhost:3000',  # Next.js dev
-    'http://127.0.0.1:5500',  # Live Server (VS Code)
-    'http://192.168.18.26:3002',  # Otro equipo en la red local
-    'http://192.168.18.26:3000',  # Otro equipo en la red local
-    'https://portal.urarara.online',  # Dominio de producción
+    'http://localhost:5173',          # Vite dev
+    'http://localhost:3000',          # Node dev
+    'http://localhost:5500',          # VS Code Live Server
+    'http://127.0.0.1:5500',          # VS Code Live Server (IPv4)
+    'http://192.168.18.26:3000',      # LAN – frontend
+    'http://192.168.18.26:3002',      # LAN – frontend alternativo
+    'http://192.168.18.26:5500',      # LAN – Live Server
+    'https://portal.urarara.online',  # Producción
+    'http://localhost:8080',        # Prueba con Vite preview
 ]
 CORS_ALLOW_CREDENTIALS = True

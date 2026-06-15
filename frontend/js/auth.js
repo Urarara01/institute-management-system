@@ -1,6 +1,20 @@
 'use strict';
 
-var API_BASE = '/api';
+// Resuelve la URL base de la API según el entorno.
+// - Local (localhost / 127.0.0.1)  → Django en :8000
+// - VPS / IP de red               → misma IP con puerto 8000
+// - Dominio de producción         → HTTPS sin puerto (proxy inverso)
+var API_BASE = (function () {
+  var h = window.location.hostname;
+  if (h === 'localhost' || h === '127.0.0.1') {
+    return 'http://localhost:8000/api';
+  }
+  if (h === 'portal.urarara.online') {
+    return 'https://portal.urarara.online/api';
+  }
+  // IP de red local (ej. 192.168.x.x) — Django en :8000
+  return 'http://' + h + ':8000/api';
+}());
 
 var Auth = (function () {
 
