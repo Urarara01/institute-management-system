@@ -7,7 +7,7 @@
 var API_BASE = (function () {
   var h = window.location.hostname;
   if (h === 'localhost' || h === '127.0.0.1') {
-    return 'http://localhost:8000/api';
+    return 'http://localhost:8800/api';
   }
   if (h === 'portal.urarara.online') {
     return 'https://portal.urarara.online/api';
