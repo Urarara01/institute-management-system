@@ -40,12 +40,21 @@
     gap: 12px;
     z-index: 30;
   }
+  /* Botón Portal dentro del menú mobile */
+  .nav__link--portal {
+    margin-top: 8px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+    color: #6ea8ff !important;
+    font-weight: 600;
+  }
 }
 
-/* Desktop: hide hamburger */
+/* Desktop: hide hamburger and mobile-only portal link */
 @media (min-width: 981px) {
   .nav-toggle { display: none; }
   .nav        { display: flex !important; }
+  .nav__link--portal { display: none; }
 }
 
 /* Mobile (<=600px) */
