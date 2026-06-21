@@ -448,19 +448,21 @@
     return t.indexOf(word.toLowerCase()) !== -1;
   }
 
-  // Portal (por href) — redirigir si ya está logueado
-  var loginLink = document.querySelector('a[href="#login"]');
-  if (loginLink) {
-    // Si ya hay sesión, ir directo al portal
-    if (typeof Auth !== 'undefined' && Auth.isLoggedIn()) {
-      loginLink.textContent = 'Mi Portal';
-      loginLink.href = 'portal.html';
-    } else {
-      loginLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        openPortalModal();
-      });
-    }
+  // Portal (por href) — redirigir si ya está logueado (todos los enlaces)
+  var loginLinks = document.querySelectorAll('a[href="#login"]');
+  for (var li = 0; li < loginLinks.length; li++) {
+    (function (link) {
+      // Si ya hay sesión, ir directo al portal
+      if (typeof Auth !== 'undefined' && Auth.isLoggedIn()) {
+        link.textContent = 'Mi Portal';
+        link.href = 'portal.html';
+      } else {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          openPortalModal();
+        });
+      }
+    })(loginLinks[li]);
   }
 
   // #registro: solicitud
